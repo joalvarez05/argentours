@@ -1,0 +1,638 @@
+/* Importamos la fuente desde google directamente a la hoja de estilos */
+/* importamos los botones desde bootstrap icons */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+/* Config inicial */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Rubik", sans-serif, Helvetica;
+}
+
+/* Estilos del NAVBAR */
+/* En toda la hoja intente aplicar la metodologia BEM ( Bloque elemento modificador ). */
+
+nav {
+  background-color: #233142;
+  padding: 10px;
+}
+
+.containerPadre {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contenedor__nav {
+  display: flex;
+  justify-content: center;
+}
+.contenedor__nav h1 {
+  font-family: "Rubik";
+  font-weight: 500;
+  color: #ff4500;
+}
+
+.lista {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.lista--item {
+  display: inline;
+  padding: 10px;
+}
+.lista--item a {
+  color: white;
+  text-decoration: none;
+}
+
+.lista--item a:hover {
+  text-decoration: underline;
+}
+/* Estilos del main (1 section, formulario del buscador */
+
+.section1 {
+  text-align: center;
+  position: relative;
+}
+.img__superior {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+
+.buscador {
+  color: #fff;
+}
+
+.buscador h2 {
+  color: #fff;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.buscador span {
+  color: #ff4500;
+}
+
+.buscador p {
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.buscador--boton {
+  background-color: #ff4500;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.buscador--boton:hover {
+  background-color: #c43b00;
+}
+
+.formulario {
+  background-color: #eeeeee;
+  margin: 20px auto 0;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.formulario--input {
+  margin-right: 8px;
+  height: 35px;
+  width: 170px;
+  outline: none;
+  padding-left: 5px;
+  border: 1px solid #d8d8d8;
+  border-radius: 7px;
+  color: #797979;
+  display: inline;
+}
+
+.formulario--input:focus {
+  border: 2px solid #9029cba8;
+}
+
+.formulario--date {
+  width: 120px;
+}
+
+.formulario--button {
+  background-color: #ff4500;
+  border-radius: 7px;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  display: flex;
+}
+
+.formulario--button:hover {
+  background-color: #50007f;
+  transition-duration: 0.2s;
+}
+
+/* Section 2 */
+
+.zona2__principal {
+  background-color: #ededed;
+  padding: 60px;
+  font-weight: lighter;
+  display: flex;
+  justify-content: center;
+}
+
+.zona2__principal h2 {
+  font-size: 24px;
+}
+
+.zona2__principal p {
+  letter-spacing: 0.6px;
+  padding: 8px 0px;
+  margin-bottom: 5px;
+  line-height: 1.25;
+}
+
+.imagen__zona2 {
+  width: 420px;
+  height: 290px;
+  border-radius: 12px;
+}
+
+.imagen--cafayate {
+  display: flex;
+  align-items: center;
+}
+
+.zona2__principal--flex {
+  width: 50%;
+}
+
+/* Section 3 y 5 se usan los mismos estilos */
+
+.descuentos {
+  padding: 40px;
+}
+
+.descuentos p {
+  text-align: center;
+}
+
+.descuentos h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.zona3--flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.zona3--flex h3 {
+  font-size: 18px;
+  text-wrap: wrap;
+}
+
+.zona3--flex p {
+  position: relative;
+  top: 15px;
+  margin-bottom: 10px;
+}
+
+.zona3--div {
+  text-align: center;
+  width: 360px;
+  padding: 25px 0px;
+  /* margin-right: 50px; */
+  background-color: #efefef;
+  border-radius: 10px;
+  box-shadow: 0 0 3px #797979a2;
+}
+
+.zona3--div:hover {
+  box-shadow: 0 0 10px #797979cb;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+.imagenesDescuentos {
+  height: 300px;
+  width: 90%;
+  padding: 5px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+span {
+  color: #ff4500;
+  font-weight: bold;
+}
+
+/* Section 4 */
+/* Reutilizamos las clases del section 2 porque es el mismo estilo, diferente color. */
+
+.zona2__principal--background {
+  background-color: #233142;
+  color: white;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.zona2__principal--background h2,
+.zona2__principal--background p {
+  margin-bottom: 10px;
+  letter-spacing: 0.8px;
+  line-height: 1.25;
+}
+
+/* Section del formulario de contacto final  */
+
+#contacto {
+  background-color: #ff4500;
+  height: 380px;
+  padding: 8px;
+}
+
+.formulario__final--h2 {
+  color: white;
+  letter-spacing: 1.5px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.formulario__final {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.forme {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.label {
+  display: flex;
+  justify-content: start;
+  color: white;
+  margin-bottom: 7px;
+}
+
+.inputContacto {
+  width: 400px;
+  padding: 8px;
+  margin-bottom: 20px;
+  border-radius: 7px;
+  outline: none;
+  border: 1px solid transparent;
+  font-family: sans-serif, Helvetica;
+}
+
+.inputContacto:hover,
+textarea:hover {
+  border: 1px solid #9f9f9fa7;
+  box-shadow: 0 0 12px #50007f;
+}
+
+textarea {
+  resize: none;
+  width: 400px;
+  padding: 8px;
+  border-radius: 7px;
+  border: 1px solid transparent;
+  outline: none;
+  font-family: sans-serif, Helvetica;
+}
+
+.botonFormulario {
+  color: white;
+  background-color: #454548;
+  margin-top: 14px;
+  border-radius: 7px;
+  border: 1px solid transparent;
+  padding: 6px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.botonFormulario:hover {
+  background-color: #50007f;
+  transition-duration: 0.2s;
+}
+
+/* icono fixed */
+.iconoFijo {
+  background-color: #7d02c567;
+  color: white;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  font-size: 30px;
+  border-radius: 9px;
+  padding: 8px;
+  border: none;
+}
+
+.iconoFijo:hover {
+  box-shadow: 0 0 10px black;
+  transition-duration: 0.1s;
+}
+
+/* Estilos FOOTER */
+
+footer {
+  background-color: #454548;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  font-weight: lighter;
+}
+
+/* mediaqueries para adaptación a dispositivos pequeños como smartphones, kindle, etc. */
+@media screen and (max-width: 767px) {
+  ul {
+    text-align: center;
+    line-height: 1.5;
+
+  }
+
+  .img__superior {
+    width: 100%;
+    height: 0 auto;
+    object-fit: cover;
+    filter: brightness(50%);
+
+  }
+
+  .buscador {
+    max-width: 767%;
+
+  }
+
+  .containerPadre {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    input,
+    select {
+      width: 100%;
+      margin-bottom: 4px;
+    }
+  }
+
+  .formulario--button {
+    margin-top: 10px;
+    font-weight: bold;
+
+  }
+
+  .zona2__principal {
+    display: block;
+
+  }
+
+  .zona2__principal--flex {
+    width: 100%;
+
+  }
+
+  .imagen__zona2 {
+    width: 100%;
+    text-align: center;
+
+  }
+
+  .zona3--flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+  }
+
+  .zona3--div {
+    text-align: center;
+    margin-bottom: 10px;
+
+  }
+
+  .imagenesDescuentos {
+    width: 80%;
+
+  }
+
+  .zona2__principal--background {
+    display: block;
+
+  }
+
+  #contacto {
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+
+  }
+
+  .formContacto {
+    width:100%;
+    
+  }
+
+  .inputContacto {
+    width: 100%;
+    border: 1px solid transparent;
+    font-family: sans-serif, Helvetica;
+  }
+
+  textarea {
+    width: 100%;
+  }
+}
+
+/* media queries para adaptacion a dispositivos medianos como tablets o netbooks. */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+  
+  .contenedor__nav h1 {
+    font-size: 30px;
+
+  }
+
+  .containerPadre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap:20px;
+
+  }
+
+  .buscador {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .lista {
+    ul {
+      font-size: 22px;
+    }
+  }
+
+  .zona3--div {
+    width: 95%;
+
+  }
+
+  .zona2__principal--background {
+    display: block;
+
+  }
+
+  .zona2__principal--flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+  }
+
+  .buscador h2 {
+    font-size: 24px;
+
+  }
+
+  .buscador h3 {
+    font-size: 22px;
+    text-wrap: wrap;
+
+  }
+
+  .formulario {
+    width:90%;
+
+  }
+
+  .formulario--input {
+    width: 90%;
+    padding: 5px;
+    margin-bottom: 5px;
+
+  }
+
+  .formulario--button {
+    margin-top: 10px;
+
+  }
+
+  .zona2__principal {
+    background-color: #ededed;
+    padding: 60px;
+    font-weight: lighter;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .zona2__principal--flex {
+    width: 100%;
+    h2 {
+      margin-bottom: 10px;
+    }
+  }
+
+  .imagen--cafayate {
+    width: 100%;
+    display:flex;
+    justify-content: center;
+
+  }
+
+  .imagen__zona2 {
+    width: 80%;
+    border-radius: 12px;
+
+  }
+
+  .zona3--flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+
+  }
+
+  .zona3--flex h3 {
+    font-size: 18px;
+    text-wrap: wrap;
+
+  }
+
+  .zona3--flex p {
+    position: relative;
+    top: 15px;
+    margin-bottom: 10px;
+
+  }
+
+  .descuentos p {
+    line-height: 2;
+    
+  }
+
+  .zona3--div {
+    width: 90%;
+    img {
+      width: 80%;
+      border-radius: 12px;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .zona3--flex {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+  }
+
+}
